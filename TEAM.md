@@ -53,3 +53,23 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 - **Điều mình học được từ phần nhóm:**
     - Học được cách tách bạch rạch ròi giữa bước đã có công cụ giải quyết bằng **Rule** (bắt SĐT, đồng bộ khách cũ trên POS) với bước thực sự cần **Workflow AI** (đọc hiểu ngữ cảnh khách đổi ý màu/size rải rác trong hội thoại dài).
     - Hiểu vì sao trong bài toán tạo đơn, lỗi "điền bừa khi thiếu thông tin" (False Positive) nguy hiểm hơn lỗi "để trống báo thiếu" (False Negative), từ đó thiết kế Boundary ép AI trả về `null` và giữ bước nhân viên sales duyệt cuối cùng.
+
+### NguyenNhoTrong-2A202603666
+
+**Phần việc phụ trách:** Ghi chép, phản biện chính, phụ trách research công cụ và mức can thiệp AI ở CP4–CP6.
+
+- **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+    - Pitch các problem card về reset mật khẩu, onboarding tài khoản và cấp quyền folder ở CP3; đặt câu hỏi phản biện về bảo mật, OTP và việc không để AI tự quyết định các thao tác nhạy cảm.
+    - Tham gia research Pancake POS/Vpage, Sapo Social và OpenAI Structured Outputs; so sánh phần đã được Rule hỗ trợ với phần còn cần AI đọc hiểu ngữ cảnh.
+    - Góp ý thu hẹp phạm vi từ mọi đơn hàng xuống các cuộc hội thoại dài, có nhiều mẫu hoặc khách đổi ý; đề xuất Workflow thay vì Agent tự động hoàn toàn.
+    - Góp ý boundary của AI: không tự lưu đơn, không tự đẩy kho, không tự đoán màu/size/địa chỉ khi thông tin chưa rõ; cần trả về `null`, hiển thị trường thiếu và để nhân viên sales kiểm tra.
+    - Tham gia xây dựng phần so sánh No AI/Rule/Workflow/Agent, AI Canvas, tiêu chí đánh giá và ngưỡng dừng của pilot.
+
+- **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+    - Báo cáo cá nhân: `report/individual/202603666_NguyenNhoTrong.md`.
+    - Báo cáo nhóm: Mục 2.1 (các candidate của Trọng), Mục 3.3 (research giải pháp), Mục 6 (mức can thiệp AI), Mục 7 (boundary và tiêu chí đánh giá), Mục 8 (ngưỡng dừng).
+    - Bộ eval: `report/assets/cp6-eval-dataset.md`.
+
+- **Điều mình học được từ phần nhóm:**
+    - Học được cách phân biệt rõ bước nào chỉ cần Rule, bước nào cần AI và bước nào bắt buộc phải có con người kiểm tra.
+    - Hiểu rằng với dữ liệu hội thoại mơ hồ, để trống và báo thiếu thông tin an toàn hơn việc để AI tự đoán rồi làm người duyệt hiểu nhầm là dữ liệu đã chính xác.
